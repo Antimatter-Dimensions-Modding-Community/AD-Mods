@@ -300,7 +300,8 @@ function updateRealityRecords(realityProps) {
     player.records.bestReality.realTime = player.records.thisReality.realTime;
     player.records.bestReality.speedSet = Glyphs.copyForRecords(Glyphs.active.filter(g => g !== null));
   }
-  player.records.bestReality.trueTime = Math.min(player.records.bestReality.trueTime, player.records.thisReality.trueTime)
+  // eslint-disable-next-line max-len
+  player.records.bestReality.trueTime = Math.min(player.records.bestReality.trueTime, player.records.thisReality.trueTime);
 }
 
 function giveRealityRewards(realityProps) {
@@ -639,7 +640,7 @@ export function finishProcessReality(realityProps) {
   player.galaxies = DC.D0;
   player.partInfinityPoint = 0;
   player.partInfinitied = 0;
-  player.break = false;
+  player.break = true;
   player.IPMultPurchases = DC.D0;
   Currency.infinityPower.reset();
   Currency.timeShards.reset();
