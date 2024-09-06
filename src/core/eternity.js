@@ -44,6 +44,7 @@ function giveEternityRewards(auto) {
   player.records.bestEternity.bestEPminReality =
     player.records.bestEternity.bestEPminReality.max(player.records.thisEternity.bestEPmin);
 
+  // eslint-disable-next-line max-len
   player.records.bestEternity.trueTime = Math.min(player.records.bestEternity.trueTime, player.records.thisEternity.trueTime);
   Currency.infinitiesBanked.value = Currency.infinitiesBanked.value.plusEffectsOf(
     Achievement(131).effects.bankedInfinitiesGain,
@@ -101,10 +102,7 @@ export function eternity(force, auto, specialConditions = {}) {
   initializeChallengeCompletions();
   initializeResourcesAfterEternity();
 
-  if (!EternityMilestone.keepAutobuyers.isReached && !(Pelle.isDoomed && PelleUpgrade.keepAutobuyers.canBeApplied)) {
-    // Fix infinity because it can only break after big crunch autobuyer interval is maxed
-    player.break = false;
-  }
+  player.break = true;
 
   player.challenge.eternity.current = 0;
   if (!specialConditions.enteringEC && !Pelle.isDoomed) {
