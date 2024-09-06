@@ -38,6 +38,18 @@ visible tab and subtab, if such an entry exists.
       tab: ""
     },
     {
+      name: "NG+ Buffs",
+      info: () => `
+    <ul>
+    <li>IP Multiplier ×${format(DC.D2)}→×${format(DC.D5)}</li>
+    <li>Permanently Break Infinity</li>
+    </ul>
+`,
+      isUnlocked: () => true,
+      tags: ["NG+", "ngp", "mod", "buffs"],
+      tab: ""
+    },
+    {
       name: "Your savefile",
       info: () => `
 Your game's save data is stored on your computer's browser data if you are playing on a web browser, or in your Steam
