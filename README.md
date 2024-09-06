@@ -1,5 +1,7 @@
 # Antimatter Dimensions
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/652694d14b7a41d582f466d09f62c435)](https://app.codacy.com/gh/Antimatter-Dimensions-Modding-Community/AD-Mods?utm_source=github.com&utm_medium=referral&utm_content=Antimatter-Dimensions-Modding-Community/AD-Mods&utm_campaign=Badge_Grade)
+
 ## Run
 
 To run the game locally, you will need to install
