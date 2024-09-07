@@ -43,6 +43,12 @@ visible tab and subtab, if such an entry exists.
     <ul>
     <li>IP Multiplier ×${format(DC.D2)}→×${format(DC.D5)}</li>
     <li>Permanently Break Infinity</li>
+    <li>Time Study 111: ${format(285)}→${format(250)}</li>
+    <li>Time Study 132: ${formatPercents(0.4)}→${formatPercents(0.55)}</li>
+    <li>Time Study 181 is free and haven't requirement</li>
+    <li>Time Study 132: ×${format(DC.D20)}→×${format(DC.D200)}</li>
+    <li>Eternity Challenge 11 base goal ${format(DC.E450)} IP→${format(DC.E400)} IP</li>
+    <li>Eternity Challenge 11 base goal ${format(DC.E11200)} IP→${format(DC.E11150)} IP while Doomed</li>
     </ul>
 `,
       isUnlocked: () => true,
