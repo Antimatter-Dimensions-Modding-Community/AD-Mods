@@ -48,6 +48,7 @@ visible tab and subtab, if such an entry exists.
     <li>Time Study 181 is free and haven't requirement</li>
     <li>Time Study 132: ×${format(DC.D20)}→×${format(DC.D200)}</li>
     <li>Eternity Challenge 11 base goal ${format(DC.E450)} IP→${format(DC.E400)} IP</li>
+    <li>Reality Upgrade Cosmic Conglomerate: ×${format(DC.E5)}→×${format(DC.D2E5)}</li>
     <li>Eternity Challenge 11 base goal ${format(DC.E11200)} IP→${format(DC.E11150)} IP while Doomed</li>
     </ul>
 `,
