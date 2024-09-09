@@ -54,6 +54,9 @@ visible tab and subtab, if such an entry exists.
     <li>Teresa Perk Shop cost /${format(DC.D4)}</li>
     <li>V unlock requirement ^0.8</li>
     <li>V Milestone 3 ^1.35</li>
+    <li>Memory Chunks gain ×${format(DC.D5)}</li>
+    <li>Cursed Glyph Level: ${format(DC.D6666)}→${format(DC.D666)}</li>
+    <li>Rebuyable Imaginary Upgrades cost ÷${format(DC.D10)}</li>
     <li>Eternity Challenge 11 base goal ${format(DC.E11200)} IP→${format(DC.E11150)} IP while Doomed</li>
     </ul>
 `,
