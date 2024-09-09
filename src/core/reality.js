@@ -621,8 +621,6 @@ export function finishProcessReality(realityProps) {
 
   player.sacrificed = DC.D0;
 
-  lockAchievementsOnReality();
-
   // Because initializeChallengeCompletions has some code that completes normal challenges with 2 eternities,
   // and we haven't reset eternities yet (and I'm nervous about changing the order of this code),
   // add a flag to indicate that this is a reality reset.
@@ -840,12 +838,4 @@ export function clearCelestialRuns() {
 
 export function isInCelestialReality() {
   return Object.values(player.celestials).some(x => x.run);
-}
-
-function lockAchievementsOnReality() {
-  if (Perk.achievementGroup5.isBought) return;
-  for (const achievement of Achievements.preReality) {
-    achievement.lock();
-  }
-  player.reality.achTimer = DC.D0;
 }
