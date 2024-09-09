@@ -20,7 +20,7 @@ function rebuyable(config) {
 export const perkShop = {
   glyphLevel: rebuyable({
     id: 0,
-    initialCost: 1,
+    initialCost: 0.25,
     increment: 2,
     description: () => `Increase pre-instability Glyph levels by ${formatPercents(0.05)}`,
     effect: bought => Decimal.pow(1.05, bought),
@@ -31,7 +31,7 @@ export const perkShop = {
   }),
   rmMult: rebuyable({
     id: 1,
-    initialCost: 1,
+    initialCost: 0.25,
     increment: 2,
     description: "Double Reality Machine gain",
     effect: bought => Decimal.pow(2, bought),
@@ -42,7 +42,7 @@ export const perkShop = {
   }),
   bulkDilation: rebuyable({
     id: 2,
-    initialCost: 100,
+    initialCost: 25,
     increment: 2,
     description: "Dilation autobuyers buy twice as many Dilation Upgrades at once.",
     effect: bought => Decimal.pow(2, bought),
@@ -53,7 +53,7 @@ export const perkShop = {
   }),
   autoSpeed: rebuyable({
     id: 3,
-    initialCost: 1000,
+    initialCost: 250,
     increment: 2,
     description: () => `Infinity Dimension, Time Dimension, Dilation,
       and Replicanti autobuyers are ${formatX(2)} faster.`,
@@ -67,7 +67,7 @@ export const perkShop = {
     id: 4,
     description: () => `Receive a Music Glyph of a random type that is ${formatPercents(0.8)} of your highest level.
       (Try clicking it!)`,
-    cost: () => 1,
+    cost: () => 0.25,
     formatCost: value => formatInt(value),
     costCap: () => Number.MAX_VALUE,
     cap: () => Number.MAX_VALUE
@@ -76,7 +76,7 @@ export const perkShop = {
   fillMusicGlyph: rebuyable({
     id: 5,
     description: () => `Fill all empty slots in your inventory with Music Glyphs`,
-    cost: () => Math.clampMin(GameCache.glyphInventorySpace.value, 1),
+    cost: () => Math.clampMin(GameCache.glyphInventorySpace.value, 1) / 4,
     otherReq: () => GameCache.glyphInventorySpace.value > 0,
     formatCost: value => formatInt(value),
     costCap: () => Number.MAX_VALUE,
