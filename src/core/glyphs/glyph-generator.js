@@ -155,8 +155,8 @@ export const GlyphGenerator = {
       idx: null,
       type: "cursed",
       strength: str,
-      level: new Decimal(6666),
-      rawLevel: new Decimal(6666),
+      level: new Decimal(666),
+      rawLevel: new Decimal(666),
       effects,
     };
   },
