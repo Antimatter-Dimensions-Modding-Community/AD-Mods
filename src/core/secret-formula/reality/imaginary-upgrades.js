@@ -14,7 +14,7 @@ export const imaginaryUpgrades = [
   rebuyable({
     name: "Temporal Intensifier",
     id: 1,
-    initialCost: 3,
+    initialCost: 0.3,
     costMult: 60,
     description: () => `Increase Temporal Amplifier multiplier by +${format(0.15, 2, 2)}`,
     effect: 0.15
@@ -22,7 +22,7 @@ export const imaginaryUpgrades = [
   rebuyable({
     name: "Replicative Intensifier",
     id: 2,
-    initialCost: 4,
+    initialCost: 0.4,
     costMult: 60,
     description: () => `Increase Replicative Amplifier multiplier by +${format(0.15, 2, 2)}`,
     effect: 0.15
@@ -30,7 +30,7 @@ export const imaginaryUpgrades = [
   rebuyable({
     name: "Eternal Intensifier",
     id: 3,
-    initialCost: 1,
+    initialCost: 0.1,
     costMult: 40,
     description: () => `Increase Eternal Amplifier multiplier by +${format(0.4, 2, 2)}`,
     effect: 0.4
@@ -38,7 +38,7 @@ export const imaginaryUpgrades = [
   rebuyable({
     name: "Superluminal Intensifier",
     id: 4,
-    initialCost: 5,
+    initialCost: 0.5,
     costMult: 80,
     description: () => `Increase Superluminal Amplifier multiplier by +${format(0.15, 2, 2)}`,
     effect: 0.15
@@ -46,7 +46,7 @@ export const imaginaryUpgrades = [
   rebuyable({
     name: "Boundless Intensifier",
     id: 5,
-    initialCost: 1,
+    initialCost: 0.1,
     costMult: 30,
     description: () => `Increase Boundless Amplifier multiplier by +${format(0.6, 2, 2)}`,
     effect: 0.6
@@ -54,7 +54,7 @@ export const imaginaryUpgrades = [
   rebuyable({
     name: "Elliptic Materiality",
     id: 6,
-    initialCost: 1e4,
+    initialCost: 1e3,
     costMult: 500,
     description: () => `Increase the Reality Machine cap by ${formatX(1e100)}`,
     effect: 1e100,
@@ -64,7 +64,7 @@ export const imaginaryUpgrades = [
   rebuyable({
     name: "Runic Assurance",
     id: 7,
-    initialCost: 2e5,
+    initialCost: 2e4,
     costMult: 500,
     description: () => `Delay Glyph Instability starting level by ${formatInt(200)}`,
     effect: 200,
@@ -73,7 +73,7 @@ export const imaginaryUpgrades = [
   rebuyable({
     name: "Hyperbolic Apeirogon",
     id: 8,
-    initialCost: 1e7,
+    initialCost: 1e6,
     costMult: 800,
     description: () => `Multiply Infinity Dimensions by ${format("1e100000")}`,
     effect: DC.E100000,
@@ -83,7 +83,7 @@ export const imaginaryUpgrades = [
   rebuyable({
     name: "Cosmic Filament",
     id: 9,
-    initialCost: 1e9,
+    initialCost: 1e8,
     costMult: 1000,
     description: () => `Increase Galaxy strength`,
     effect: 0.03,
@@ -92,7 +92,7 @@ export const imaginaryUpgrades = [
   rebuyable({
     name: "Entropic Condensing",
     id: 10,
-    initialCost: 8e9,
+    initialCost: 8e8,
     costMult: 2000,
     description: () => `Increase Singularity gain`,
     effect: 1,
