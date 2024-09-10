@@ -57,6 +57,7 @@ visible tab and subtab, if such an entry exists.
     <li>Memory Chunks gain ×${format(DC.D5)}</li>
     <li>Cursed Glyph Level: ${format(DC.D6666)}→${format(DC.D666)}</li>
     <li>Rebuyable Imaginary Upgrades cost ÷${format(DC.D10)}</li>
+    <li>buffed many Singularity Milestones</li>
     <li>Eternity Challenge 11 base goal ${format(DC.E11200)} IP→${format(DC.E11150)} IP while Doomed</li>
     </ul>
 `,
