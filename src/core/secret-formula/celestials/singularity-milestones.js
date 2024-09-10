@@ -9,7 +9,7 @@ export const singularityMilestones = {
   // Infinite
   continuumMult: {
     start: 1,
-    repeat: 125,
+    repeat: 50,
     increaseThreshold: 20,
     limit: Infinity,
     description: "Continuum percentage multiplier",
@@ -19,7 +19,7 @@ export const singularityMilestones = {
   },
   darkMatterMult: {
     start: 2,
-    repeat: 20,
+    repeat: 15,
     increaseThreshold: 30,
     limit: Infinity,
     description: "Dark Matter production multiplier",
@@ -29,7 +29,7 @@ export const singularityMilestones = {
   },
   darkEnergyMult: {
     start: 3,
-    repeat: 120,
+    repeat: 90,
     increaseThreshold: 10,
     limit: Infinity,
     description: "Dark Energy production multiplier",
@@ -50,7 +50,7 @@ export const singularityMilestones = {
   singularityMult: {
     id: 5,
     start: 50,
-    repeat: 3000,
+    repeat: 2000,
     increaseThreshold: 5,
     limit: Infinity,
     description: "Singularity gain multiplier",
@@ -90,7 +90,7 @@ export const singularityMilestones = {
   },
   autoCondense: {
     start: 8,
-    repeat: 80,
+    repeat: 10,
     limit: 8,
     description: "Automatically condense Singularities when reaching a threshold above the cap",
     effect: completions => [Infinity, 1.3, 1.22, 1.15, 1.1, 1.06, 1.03, 1.01, 1][completions.toNumber()],
@@ -116,8 +116,8 @@ export const singularityMilestones = {
     upgradeDirection: LAITELA_UPGRADE_DIRECTION.SELF_BOOST,
   },
   darkAutobuyerSpeed: {
-    start: 45,
-    repeat: 650,
+    start: 30,
+    repeat: 2,
     limit: 8,
     description: "Autobuyer speed for all DMD Autobuyers",
     effect: completions => [30, 20, 15, 10, 5, 3, 2, 1, 0][completions.toNumber()],
@@ -136,7 +136,7 @@ export const singularityMilestones = {
   improvedSingularityCap: {
     start: 150,
     repeat: 10000,
-    limit: 4,
+    limit: 9,
     description: "Increased Singularity gain per cap increase",
     effect: completions => completions.add(11),
     effectFormat: x => `${formatX(x)}`,
@@ -280,7 +280,7 @@ export const singularityMilestones = {
     upgradeDirection: LAITELA_UPGRADE_DIRECTION.BOOSTS_MAIN,
   },
   tesseractMultFromSingularities: {
-    start: 2.5e45,
+    start: 1e20,
     repeat: 0,
     limit: 1,
     description: "Singularities increase effective Tesseract count",
