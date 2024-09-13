@@ -175,7 +175,7 @@ export const pelleRifts = {
       },
       {
         resource: "recursion",
-        requirement: 1,
+        requirement: 0.01,
         description: "Permanently unlock the Galaxy Generator",
       },
     ],
