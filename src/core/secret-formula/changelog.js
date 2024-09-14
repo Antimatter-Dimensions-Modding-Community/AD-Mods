@@ -9,7 +9,7 @@ export const changelog = [
    * }
    */
   {
-    date: [2024, 9, "???"],
+    date: [2024, 9, 15],
     name: "NG+ First Release",
     info: `
     Major Things:
