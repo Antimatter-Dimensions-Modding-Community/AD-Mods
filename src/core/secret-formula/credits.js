@@ -16,6 +16,8 @@ export const credits = {
     13: "Lurker Tester",
     14: "Web Tester",
     15: "Android Tester",
+    16: "NG+ Creator",
+    17: "NG+ Collabrator",
   },
 
   // Each person must have a name and at least one role (the index of the desired role in roles). They can also have a
@@ -532,6 +534,27 @@ export const credits = {
     }, {
       name: "Airakogi",
       roles: 15
+    }, {
+      name: "antimatter19728",
+      roles: 16
+    }, {
+      name: "seanxlx2011",
+      roles: 16
+    }, {
+      name: "0i00000000a7",
+      roles: 17
+    }, {
+      name: "aquamarine309",
+      roles: 17
+    }, {
+      name: "HexaVault",
+      roles: 17
+    }, {
+      name: "loader3229",
+      roles: 17
+    }, {
+      name: "WYXkk",
+      roles: 17
     }
   ]
 };
