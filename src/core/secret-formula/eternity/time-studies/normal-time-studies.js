@@ -424,7 +424,7 @@ export const normalTimeStudies = [
   },
   {
     id: 181,
-    cost: new Decimal(200),
+    cost: new Decimal(0),
     requirement: [],
     reqType: TS_REQUIREMENT_TYPE.ALL,
     description: () => `You gain ${formatPercents(0.01)} of your Infinity Points gained on crunch each second`,
