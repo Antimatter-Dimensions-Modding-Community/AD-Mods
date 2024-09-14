@@ -19,7 +19,7 @@ export default {
   data() {
     return {
       isDoomed: false,
-      maxAM: DC.D0,
+      maxAM: new Decimal(0),
       reqAM: DC.BIMAX,
       canEnterPelle: false,
       hasStrike: false,
@@ -35,9 +35,7 @@ export default {
     update() {
       this.isDoomed = Pelle.isDoomed;
       if (!this.isDoomed) {
-        if (Currency.antimatter.value.gte(this.maxAM)) {
-          this.maxAM = Currency.antimatter.value;
-        }
+        this.maxAM.copyfrom(Currency.antimatter.value);
         this.canEnterPelle = this.maxAM.gte(this.reqAM);
       }
       this.hasStrike = PelleStrikes.all.some(s => s.hasStrike);
