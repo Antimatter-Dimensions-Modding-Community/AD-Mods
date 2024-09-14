@@ -59,6 +59,11 @@ visible tab and subtab, if such an entry exists.
     <li>Rebuyable Imaginary Upgrades cost ÷${format(DC.D10)}</li>
     <li>buffed many Singularity Milestones</li>
     <li>Eternity Challenge 11 base goal ${format(DC.E11200)} IP→${format(DC.E11150)} IP while Doomed</li>
+    <li>Galaxy Generator requirement: 100% [Recursion/Dispersion/Destruction]→1% [Recursion/Dispersion/Destruction]</li>
+    <li>Galaxy Generator AM Upgrade cost multiplier: ×${format(DC.E1E8)}→×${format(DC.E100000)}</li>
+    <li>Galaxy Generator IP Upgrade cost multiplier: ×${format(DC.E2E6)}→×${format(DC.E2000)}</li>
+    <li>Galaxy Generator EP Upgrade cost multiplier: ×${format(DC.E10000)}→×${format(DC.E1000)}</li>
+    <li>Remove Endgame Animation</li>
     </ul>
 `,
       isUnlocked: () => true,
