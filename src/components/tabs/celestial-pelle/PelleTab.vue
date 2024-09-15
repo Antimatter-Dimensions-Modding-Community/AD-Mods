@@ -1,8 +1,4 @@
 <script>
-import { DC } from '../../../core/constants';
-
-import { Currency } from '../../../core/currency';
-
 import CelestialQuoteHistory from "@/components/CelestialQuoteHistory";
 import GalaxyGeneratorPanel from "./PelleGalaxyGeneratorPanel";
 import PelleBarPanel from "./PelleBarPanel";
@@ -19,9 +15,9 @@ export default {
   data() {
     return {
       isDoomed: false,
-      maxAM: DC.D0,
-      reqAM: DC.BIMAX,
       canEnterPelle: false,
+      completedRows: 0,
+      cappedResources: 0,
       hasStrike: false,
       hasGalaxyGenerator: false
     };
@@ -30,15 +26,21 @@ export default {
     symbol() {
       return Pelle.symbol;
     },
+    totalRows() {
+      return Achievements.prePelleRows.length;
+    },
+    totalAlchemyResources() {
+      return AlchemyResources.all.length;
+    }
   },
   methods: {
     update() {
       this.isDoomed = Pelle.isDoomed;
       if (!this.isDoomed) {
-        if (Currency.antimatter.value.gte(this.maxAM)) {
-          this.maxAM = Currency.antimatter.value;
-        }
-        this.canEnterPelle = this.maxAM.gte(this.reqAM);
+        this.completedRows = Achievements.prePelleRows.countWhere(r => r.every(a => a.isUnlocked));
+        this.cappedResources = AlchemyResources.all.countWhere(r => r.capped);
+        this.canEnterPelle = this.completedRows === this.totalRows &&
+          this.cappedResources === this.totalAlchemyResources;
       }
       this.hasStrike = PelleStrikes.all.some(s => s.hasStrike);
       this.hasGalaxyGenerator = PelleRifts.recursion.milestones[2].canBeApplied || GalaxyGenerator.spentGalaxies.gt(0);
@@ -91,10 +93,13 @@ export default {
       v-else
       class="pelle-unlock-requirements"
     >
-      You must have {{ formatInt(reqAM) }} Antimatter to unlock Pelle, Celestial of Antimatter.
+      You must have {{ formatInt(totalRows) }} rows of Achievements
+      and all of your Glyph Alchemy Resources capped to unlock Pelle, Celestial of Antimatter.
       <br>
       <br>
-      {{ formatInt(maxAM) }} / {{ formatInt(reqAM) }} Antimatter
+      {{ formatInt(completedRows) }} / {{ formatInt(totalRows) }} Achievement rows completed
+      <br>
+      {{ formatInt(cappedResources) }} / {{ formatInt(totalAlchemyResources) }} capped Alchemy Resources
     </div>
   </div>
 </template>
