@@ -35,7 +35,7 @@ export default {
     update() {
       this.isDoomed = Pelle.isDoomed;
       if (!this.isDoomed) {
-        this.maxAM.copyfrom(Currency.antimatter.value);
+        this.maxAM.copyFrom(Currency.antimatter.value);
         this.canEnterPelle = this.maxAM.gte(this.reqAM);
       }
       this.hasStrike = PelleStrikes.all.some(s => s.hasStrike);
