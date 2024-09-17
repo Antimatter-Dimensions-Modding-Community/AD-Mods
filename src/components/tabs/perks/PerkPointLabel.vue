@@ -8,7 +8,7 @@ export default {
   },
   data() {
     return {
-      pp: 0,
+      pp: new Decimal(0),
       treeLayout: 0,
       physicsEnabled: false,
       physicsOverride: false,
