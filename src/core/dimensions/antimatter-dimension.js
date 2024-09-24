@@ -317,15 +317,15 @@ export function buyMaxDimension(tier, bulk = Infinity) {
 
   // This is the bulk-buy math, explicitly ignored if abnormal cost increases are active
   const maxBought = dimension.costScale.getMaxBought(
-    Decimal.floor(dimension.bought.div(10)).add(dimension.costBumps), dimension.currencyAmount, DC.E1
+    Decimal.floor(dimension.bought.div(10)).add(dimension.costBumps), dimension.currencyAmount, DC.E1, true
   );
   if (maxBought === null) {
     return;
   }
   let buying = maxBought.quantity;
   if (buying.gt(bulkLeft)) buying = new Decimal(bulkLeft);
-  dimension.amount = dimension.amount.plus(buying.times(10));
-  dimension.bought = dimension.bought.add(buying.times(10));
+  dimension.amount = dimension.amount.plus(buying);
+  dimension.bought = dimension.bought.add(buying);
   dimension.currencyAmount = dimension.currencyAmount.minus(Decimal.pow10(maxBought.logPrice)).max(0);
 }
 
