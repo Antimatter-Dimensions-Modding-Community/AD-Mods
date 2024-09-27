@@ -28,7 +28,7 @@ export const pelleGalaxyGeneratorUpgrades = {
     id: "galaxyGeneratorMultiplicative",
     description: "Multiply Galaxy generation",
     cost: x => Decimal.pow(10, x),
-    effect: x => Decimal.pow(2.5, x).min(Decimal.pow(x, 10)),
+    effect: x => Decimal.pow(2.5, x).min(Decimal.pow(x, 5)),
     formatEffect: x => formatX(x, 2, 1),
     currency: () => Currency.galaxyGeneratorGalaxies,
     currencyLabel: "Galaxy"
@@ -37,7 +37,7 @@ export const pelleGalaxyGeneratorUpgrades = {
     id: "galaxyGeneratorAntimatterMult",
     description: "Multiply Galaxy generation",
     cost: x => Decimal.pow("1e100000", Decimal.pow10(x)),
-    effect: x => Decimal.pow(2, x).min(Decimal.pow(x, 10)),
+    effect: x => Decimal.pow(2, x).min(Decimal.pow(x, 5)),
     formatEffect: x => formatX(x, 2),
     currency: () => Currency.antimatter,
     currencyLabel: "Antimatter"
@@ -46,7 +46,7 @@ export const pelleGalaxyGeneratorUpgrades = {
     id: "galaxyGeneratorIPMult",
     description: "Multiply Galaxy generation",
     cost: x => Decimal.pow("1e2000", Decimal.pow10(x.mul(2))),
-    effect: x => Decimal.pow(2, x).min(Decimal.pow(x, 10)),
+    effect: x => Decimal.pow(2, x).min(Decimal.pow(x, 5)),
     formatEffect: x => formatX(x, 2),
     currency: () => Currency.infinityPoints,
     currencyLabel: "Infinity Point"
@@ -55,7 +55,7 @@ export const pelleGalaxyGeneratorUpgrades = {
     id: "galaxyGeneratorEPMult",
     description: "Multiply Galaxy generation",
     cost: x => Decimal.pow("1e1000", Decimal.pow10(x.mul(3))),
-    effect: x => Decimal.pow(2, x).min(Decimal.pow(x, 10)),
+    effect: x => Decimal.pow(2, x).min(Decimal.pow(x, 5)),
     formatEffect: x => formatX(x, 2),
     currency: () => Currency.eternityPoints,
     currencyLabel: "Eternity Point"
